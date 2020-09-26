@@ -37,7 +37,7 @@ if 0 :
     ###################################################
     
     
-    from sympy import *
+    from sympy import Symbol, solve, plot
     x = Symbol('x')
     plot( x+1, x**2, xlim=(-2,2), ylim=(-1,3) )
     plot( x*x-1, (x,-2,2))
@@ -45,6 +45,7 @@ if 0 :
     
     
     from sympy import *
+    init_printing()
     Rational(1,2)
     x, y, z = symbols('x y z')
     expr = (x**2 + 2*x + 1)/(x**2 + x)
@@ -53,8 +54,7 @@ if 0 :
     
     ###################################################    
 
-from sympy import *
+from sympy import Symbol, solve, plot
 x = Symbol('x')
 plot(x*x*x-8, (x, -3, 3))
-
 print('x는', solve('x*x*x - 8'))
