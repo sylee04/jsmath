@@ -44,7 +44,7 @@ if 0 :
     plot(x*x*x-8, (x, -3, 3))
     
     
-    from sympy import *
+    from sympy import Symbol, solve, plot
     init_printing()
     Rational(1,2)
     x, y, z = symbols('x y z')
