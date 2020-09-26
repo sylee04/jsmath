@@ -37,7 +37,7 @@ if 0 :
     ###################################################
     
     
-    from sympy import Symbol, solve, plot
+    from sympy import *
     x = Symbol('x')
     plot( x+1, x**2, xlim=(-2,2), ylim=(-1,3) )
     plot( x*x-1, (x,-2,2))
@@ -53,8 +53,43 @@ if 0 :
     Eq( 2*x, 1 )
     
     ###################################################    
-
-from sympy import Symbol, solve, plot
+    from sympy import *
+    init_printing()
+    
+    ################################################### 
+    
+    from sympy import Symbol, sympify, simplify, pprint
+    
+    x = Symbol('x')
+    
+    #expr1 = input('Input first expression in variable x: ')
+    #expr2 = input('Input second expression in variable x: ')
+    expr1 = (x**2 + 2*x + 1)/(x**2 + x)
+    
+    p1 = sympify(expr1)
+    #p2 = sympify(expr2)
+    
+    #result1 = simplify(p1+p2)
+    #result2 = simplify(p1-p2)
+    #result3 = simplify(p1*p2)
+    #result4 = simplify(p1/p2)
+    pprint(p1)
+    result1 = simplify(p1)
+    pprint(result1)
+    #pprint(result2)
+    #pprint(result3)
+    #pprint(result4)    
+        
+    ################################################### 
+    pprint((x**2 + 2*x + 1)/(x**2 + x))
+    ################################################### 
+    
+from sympy import Symbol, solve, plot, pprint
 x = Symbol('x')
 plot(x*x*x-8, (x, -3, 3))
 print('x는', solve('x*x*x - 8'))
+pprint(solve('x*x*x - 8'))
+
+
+
+
