@@ -57,3 +57,4 @@ from sympy import *
 x = Symbol('x')
 plot(x*x*x-8, (x, -3, 3))
 
+print('x는', solve('x*x*x - 8'))
