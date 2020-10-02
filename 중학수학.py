@@ -102,17 +102,33 @@ if 0 :
 #    print(list(map(lambda x : -10*x+45, [1,2,3,4])))
 #list(map(f, range(1,5)))
 
+if 0:
+    from sympy import Symbol, plot, solve
+    x = Symbol('x')
+    plot(-10*x+45)
+    plot(-10*x+45,(x, -1, 6)) # x의 범위를 좁혀보면
+    
+    def f(x):
+        a = -10*x+45
+        return a
+    print('x가', solve('-10*x+45'),'일때 f(x)는 0')
+    x값 = [1,2,3,4]
+    print('x가', x값,'일때 f(x)값은', list(map(f, x값)))
+    
+#simplify( -x -x +4)
+#Out[14]: -2*x + 4
+
 from sympy import Symbol, plot, solve
 x = Symbol('x')
-plot(-10*x+45)
-plot(-10*x+45,(x, -1, 6)) # x의 범위를 좁혀보면
+plot(-x+2)
+plot(-x+2,(x, -3, 3)) # x의 범위를 좁혀보면
 
 def f(x):
-    a = -10*x+45
+    a = -x+2
     return a
-print('x가', solve('-10*x+45'),'일때 f(x)는 0')
-x값 = [1,2,3,4]
+print('x가', solve('-x+2'),'일때 f(x)는 0')
+x값 = list(range(-4,3))
 print('x가', x값,'일때 f(x)값은', list(map(f, x값)))
-    
+
 
 
