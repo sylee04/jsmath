@@ -84,12 +84,34 @@ if 0 :
     pprint((x**2 + 2*x + 1)/(x**2 + x))
     ################################################### 
     
-from sympy import Symbol, solve, plot, pprint
+if 0 :    
+    from sympy import Symbol, solve, plot, pprint
+    x = Symbol('x')
+    plot(x*x*x-8, (x, -3, 3))
+    print('x는', solve('x*x*x - 8'))
+    pprint(solve('x*x*x - 8'))
+
+#if 0:
+#from sympy import *
+#x = Symbol('x')
+#y = Symbol('y')
+#plot(-10*x+45)
+#plot(-10*x+45,(x, -1, 5))
+#plot(-10*x+45,(x, -1, 1))
+#plot_implicit(-y-10*x+45,(x, -1, 5),(y,-5,50))
+#    print(list(map(lambda x : -10*x+45, [1,2,3,4])))
+
+
+from sympy import Symbol, plot, solve
 x = Symbol('x')
-plot(x*x*x-8, (x, -3, 3))
-print('x는', solve('x*x*x - 8'))
-pprint(solve('x*x*x - 8'))
+plot(-10*x+45)
+plot(-10*x+45,(x, -1, 6))
 
-
+def f(x):
+    return -10*x+45
+print('x가', solve('-10*x+45'),'일때 f(x)는 0')
+x값 = [1,2,3,4]
+print('x가', x값,'일때 f(x)값은', list(map(f, x값)))
+    
 
 
