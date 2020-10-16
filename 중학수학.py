@@ -129,6 +129,6 @@ def f(x):
 print('x가', solve('-x+2'),'일때 f(x)는 0')
 x값 = list(range(-4,3))
 print('x가', x값,'일때 f(x)값은', list(map(f, x값)))
-
+[print(x,'→',f(x)) for x in x값]
 
 
