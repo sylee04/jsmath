@@ -118,17 +118,32 @@ if 0:
 #simplify( -x -x +4)
 #Out[14]: -2*x + 4
 
+if 0:
+    from sympy import Symbol, plot, solve
+    x = Symbol('x')
+    plot(-x+2)
+    plot(-x+2,(x, -3, 3)) # x의 범위를 좁혀보면
+    
+    def f(x):
+        a = -x+2
+        return a
+    print('x가', solve('-x+2'),'일때 f(x)는 0')
+    x값 = list(range(-4,3))
+    print('x가', x값,'일때 f(x)값은', list(map(f, x값)))
+    [print(x,'→',f(x)) for x in x값]
+
+
 from sympy import Symbol, plot, solve
 x = Symbol('x')
-plot(-x+2)
-plot(-x+2,(x, -3, 3)) # x의 범위를 좁혀보면
+plot(3*x + 12)
+plot(3*x + 12,(x, -5, 1)) # x의 범위를 좁혀보면
+
 
 def f(x):
-    a = -x+2
-    return a
-print('x가', solve('-x+2'),'일때 f(x)는 0')
-x값 = list(range(-4,3))
+    y = 3*x + 12
+    return y
+print('x가', solve('3*x + 12'),'일때 f(x)는 0')
+x값 = list(range(-5,2))
 print('x가', x값,'일때 f(x)값은', list(map(f, x값)))
+print('x → f(x)')
 [print(x,'→',f(x)) for x in x값]
-
-
