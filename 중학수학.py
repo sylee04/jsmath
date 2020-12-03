@@ -147,3 +147,36 @@ x값 = list(range(-5,2))
 print('x가', x값,'일때 f(x)값은', list(map(f, x값)))
 print('x → f(x)')
 [print(x,'→',f(x)) for x in x값]
+
+ 
+# https://www.reddit.com/r/learnpython/comments/7etgpb/intersection_point_of_2_graphs/
+#Saiboo
+#2 points
+#·
+#3 years ago
+#If you set your two functions equal, i.e.
+#
+#f1(x) == f2(x)
+#
+#you can manipulate it to
+#
+#f1(x) - f2(x) == 0
+#
+#You can interpret the left hand side as a new function g(x) , so you get
+#
+#g(x) := f1(x) - f2(x) == 0
+#
+#This means you are searching for the roots of g(x).
+#
+#There is a function in SciPy using Brent's method which does exactly that.
+#from sympy import *
+#x = symbols('x')
+#'''y = 3.5*x + 90와 y = 7*x의 접점'''
+#solve(3.5*x + 90 - 7*x, x) #right hand side is 0 and we solve for x
+
+from sympy import symbols
+x = symbols('x')
+plot(3-6*x,15-3*x,(x, -10, 10))
+
+
+ 
